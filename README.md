@@ -51,36 +51,6 @@ make wordcount                # 论文字数统计
 
 更多关于模板的实现细节以及使用信息，请查看使用文档 `sjtuthesis.pdf`。
 
-## 反馈与贡献
-
-本模版是由诸多感兴趣的同学一起维护的开源项目，我们非常欢迎问题反馈和新的贡献者！
-
-### 反馈问题
-
-如果在使用上有任何问题，建议先查阅项目的 [Wiki 文档](https://github.com/sjtug/SJTUThesis/wiki)，并使用左上角的搜索功能进行搜索。
-如果以上方法不能解决你的问题，建议通过以下方式进行反馈（按推荐顺序排序）：
-
-* 如遇不会使用、编译错误等问题，请至 [在 GitHub 项目讨论区提问](https://github.com/sjtug/SJTUThesis/discussions) (推荐)
-* 如遇模版 BUG，或有新的需求，请至 [在 GitHub 项目中提 issue](https://github.com/sjtug/SJTUThesis/issues)
-* 您也可以加入 SJTUG 的 QQ 群即时讨论。
-    * QQ 群群号 715273806。
-
-### 成为贡献者
-
-这个仓库是面向用户的**示例模版**，如果你有很好的排版示例，可以提交到此仓库与大家分享。如果你想要为 SJTUThesis 文档类贡献代码，可移步 [SJTUTeX](https://github.com/sjtug/SJTUTeX)。
-
-`texmf/tex/latex/sjtuthesis` 目录下的内容都是通过 SJTUTeX 的 `sjtuthesis.dtx` 文件自动生成的。如果您需要修改文档类的内容，应该修改 SJTUTeX 仓库中的 `sjtuthesis.dtx`，而非直接修改 cls 文件。
-
-因此，如果您修改了 `sjtuthesis` 模版类，应该先给 `SJTUTeX` 发 PR，然后再将更新同步到本仓库。
-
-在贡献之前，你可以从[这些问题](https://github.com/sjtug/SJTUThesis/issues?q=is%3Aissue+is%3Aopen+label%3Agood-first-issue)开始熟悉贡献代码的流程。除了提交 Pull Request 之外，还有以下方式可以进行贡献：
-
-* 帮助我们解答同学们的[问题](https://github.com/sjtug/SJTUThesis/discussions)，这些问题你也可能遇到过并且知道如何解决；
-* 与我们一起维护项目的 [Wiki 文档](https://github.com/sjtug/SJTUThesis/wiki)，Wiki 任何人都可以直接编辑；
-* 向周围同学安利 SJTUThesis，让更多的同学使用我们维护的模板；
-* 在我们的讨论组中分享你的使用体验，以及吐槽。如果你也想成为项目的长期维护者，也可以通过讨论组告诉我们。:-)
-
-
 ## 致谢
 
 * 感谢 [CTeX-kit](https://github.com/CTeX-org/ctex-kit) 提供了 LaTeX 的中文支持；
@@ -88,6 +58,7 @@ make wordcount                # 论文字数统计
 * 感谢 William Wang 同学对模板移植做出的贡献；
 * 感谢 [@weijianwen](https://github.com/weijianwen) 学长开创性的工作；
 * 感谢 [@sjtug](https://github.com/sjtug) 对 0.10 及之后版本的开发和维护工作；
+* 感谢 [@moment-ggw](https://github.com/moment-ggw) 对模板二次修改的贡献；
 * 感谢所有为模板贡献过代码的[同学们](https://github.com/sjtug/SJTUThesis/graphs/contributors)，以及所有测试和使用模板的各位同学。
 
 ## 软件许可证
