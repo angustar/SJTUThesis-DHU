@@ -14,18 +14,24 @@
 % 论文基本配置，加载宏包等全局配置
 \input{setup}
 
+\newif\ifreview
+% 默认不处于盲审模式
+\reviewfalse
+% 检查review选项是否被设置，并相应地更新布尔变量
+\DeclareOption{review}{\reviewtrue}
+\ProcessOptions\relax
+
 \begin{document}
 
 %TC:ignore
 
-% 标题页
-\maketitle
-
-% 原创性声明及使用授权书
-\copyrightpage
-% 插入外置原创性声明及使用授权书
-% 此时必须在导言区使用 \usepackage{pdfpages}
-% \copyrightpage[scans/sample-copyright.pdf]
+% 添加手动生成的标题页、原创性声明和版权使用授权书、答辩委员会名单等
+% 文件title_and_copyright.pdf为手动生成，可通过东华大学毕业论文模板导出，长度为5页
+% 此部分内容在处于盲审模式时会被自动隐藏
+\ifreview
+\else
+\includepdf[pages=1-5]{scans/title_and_copyright.pdf}
+\fi
 
 % 前置部分
 \frontmatter
@@ -40,10 +46,10 @@
 % 表格索引
 \listoftables*
 % 算法索引
-\listofalgorithms*
+% \listofalgorithms*
 
 % 符号对照表
-\input{contents/nomenclature}
+% \input{contents/nomenclature}
 
 %TC:endignore
 
@@ -59,7 +65,9 @@
 %TC:ignore
 
 % 参考文献
+\sloppy
 \printbibliography[heading=bibintoc]
+\fussy
 
 % 附录
 \appendix
@@ -76,18 +84,16 @@
 
 % 用于盲审的论文需隐去致谢、发表论文、科研成果、简历
 
+% 作者简历及在学期间所获得的学术成果
+% 开启盲审模式时，个人简历会被自动隐藏，同时在学期间所获得的学术成果等仅以第几作者注明，不要出现作者或他人姓名、论文标题等
+\ifreview
+\input{contents/achievements}
+\else
+\input{contents/resume_and_achievements}
+\fi
+
 % 致谢
 \input{contents/acknowledgements}
-
-% 发表论文及科研成果
-% 盲审论文中，发表论文及科研成果等仅以第几作者注明即可，不要出现作者或他人姓名
-\input{contents/achievements}
-
-% 简历
-\input{contents/resume}
-
-% 学士学位论文要求在最后有一个大摘要，单独编页码
-\input{contents/digest}
 
 %TC:endignore
 

@@ -4,60 +4,28 @@
 [![SJTUTeX](https://img.shields.io/github/v/release/sjtug/SJTUTeX?label=SJTUTeX)](https://github.com/sjtug/SJTUTeX) 
 [![Join Discussions](https://img.shields.io/github/discussions/sjtug/SJTUThesis)](https://github.com/sjtug/SJTUThesis/discussions)
 
-## 欢迎使用上海交通大学论文模板
+## 欢迎使用东华大学论文模板
 
-本示例模板是应用上海交通大学学位论文（非官方）LaTeX 文档类 SJTUThesis 的一个完整实现。演示了排版中常用的例子，包括公式、表格、算法、参考文献等。
+本示例模板是应用上海交通大学学位论文（非官方）LaTeX 文档类 SJTUThesis 的一个完整实现，经过二次修改（不完美）后可用于东华大学论文。模板演示了排版中常用的例子，包括公式、表格、算法、参考文献等。
 用户可以参考或者直接基于此示例文档撰写论文。
 
 SJTUThesis 支持 XeTeX 与 LuaTeX 引擎，字符编码仅支持 UTF-8。
 
 ## 获取模板
 
-### 下载模版
-
-普通用户可以直接 `clone` 或者下载 [master.zip](https://github.com/sjtug/SJTUThesis/archive/refs/heads/master.zip)。
+普通用户可以直接 `clone` 。
 
 ```bash
-git clone https://github.com/sjtug/SJTUThesis.git
-# ...or with SJTUG mirror
-git clone https://mirror.sjtu.edu.cn/git/SJTUThesis.git/
+git clone https://github.com/angustar/SJTUThesis-DHU.git
 ```
 
 模版更新频繁，且只维护最新版。如有问题，可以先尝试升级模版，而后根据“反馈问题”一栏进行反馈。
 
-### Overleaf
-
-[![Overleaf](https://img.shields.io/badge/Overleaf-SJTUThesis-green.svg)](https://www.overleaf.com/latex/templates/sjtuthesis-latex-thesis-template-for-shanghai-jiao-tong-university/mkdwbyjbtfgg?r=sdkbtJ4qGS8kDZQQ&rm=d&rs=b)
-
-点击 [链接](https://www.overleaf.com/latex/templates/sjtuthesis-latex-thesis-template-for-shanghai-jiao-tong-university/mkdwbyjbtfgg?r=sdkbtJ4qGS8kDZQQ&rm=d&rs=b) 即可直接使用。
-
-如果需要在其他在线 LaTeX 平台上使用（比如 [latex.sjtu.edu.cn](https://latex.sjtu.edu.cn)），您可以下载 [最新版压缩包](https://github.com/sjtug/SJTUThesis/archive/refs/heads/master.zip)，然后上传至相应平台。请注意，Overleaf 默认使用 pdflatex 编译，您需要设置使用 XeLaTeX 编译器。
+如果需要在其他在线 LaTeX 平台上使用（比如 Overleaf (https://www.overleaf.com/)），您可以下载 [最新版压缩包](https://github.com/angustar/SJTUThesis-DHU/archive/refs/heads/master.zip)，然后上传至相应平台。请注意，Overleaf 默认使用 pdflatex 编译，您需要设置使用 XeLaTeX 编译器。
 
 ## 模板使用
 
 如果你不熟悉 LaTeX 的编译流程，请**不要**直接使用编译器进行编译。针对不同的平台，模版提供了相应的编译脚本。在编译前，需要安装最新的 TeXLive 发行版。
-
-### VSCode 用户
-
-安装 “LaTeX Workshop” 后，选择 `Recipe: latexmk (xelatex)` 编译即可，并在设置中将 `latex-workshop.latex.recipe.default` 改为 `lastUsed` 以一直使用该选项编译。
-
-### TeXStudio 用户
-
-在TexStudio的菜单栏中，Options-Configure TeXstudio界面中，修改以下两处：
-
-Commands-Latexmk一项修改为`latexmk -silent -synctex=1 -xelatex %`
-
-Build-Default Compiler一项修改为`txs:///latexmk`
-
-<details>
-
-<summary>展开配置</summary>
-
-<img src="https://user-images.githubusercontent.com/84025388/142163308-3d31f905-af78-40cb-bff1-851cdab04c87.png" width=500px/>
-
-<img src="https://user-images.githubusercontent.com/84025388/142163346-63ec7b7e-932f-44c5-90c4-3b35e435545d.png" width=500px/>
-
-</details>
 
 ### Linux 与 macOS 用户
 
@@ -94,9 +62,8 @@ make wordcount                # 论文字数统计
 
 * 如遇不会使用、编译错误等问题，请至 [在 GitHub 项目讨论区提问](https://github.com/sjtug/SJTUThesis/discussions) (推荐)
 * 如遇模版 BUG，或有新的需求，请至 [在 GitHub 项目中提 issue](https://github.com/sjtug/SJTUThesis/issues)
-* 您也可以加入 SJTUG 的 QQ 群和 Telegram 群即时讨论。
+* 您也可以加入 SJTUG 的 QQ 群即时讨论。
     * QQ 群群号 715273806。
-    * Telegram 群。首先，关注 [SJTUG 镜像站的通知频道](https://t.me/sjtug_mirrors_news)。而后，加入频道关联的群组。
 
 ### 成为贡献者
 

@@ -107,7 +107,7 @@
 %   biblatex-gb7714-2015 常用选项
 %     gbnamefmt=lowercase     姓名大小写由输入信息确定
 %     gbpub=false             禁用出版信息缺失处理
-\usepackage[backend=biber,style=gb7714-2015]{biblatex}
+\usepackage[backend=biber,style=gb7714-2015,gbnamefmt=lowercase,url=false,doi=false]{biblatex}
 % 文献表字体
 % \renewcommand{\bibfont}{\zihao{5}\fixedlineskip{15.6bp}}
 % 文献表条目间的间距
@@ -147,9 +147,88 @@
 % 附带脚注的长表格
 \usepackage{threeparttablex}
 
+% 插入外置pdf
+\usepackage{pdfpages}
+
 % 算法环境宏包
 \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 % \usepackage{algorithm, algorithmicx, algpseudocode}
+
+% 定义子图括号格式
+\renewcommand{\thesubfigure}{\alph{subfigure})}
+
+% 修改目录行间距
+\setlength{\cftbeforechapskip}{1bp}
+\setlength{\cftbeforesecskip}{1bp}
+\setlength{\cftbeforesubsecskip}{1bp}
+
+% 重新定义题目格式
+\newcommand{\reTitle}[1]{
+  % 检查当前页码，如果是偶数页则新开一页
+  \ifthenelse{\isodd{\value{page}}}
+  {}
+  {\newpage}
+  \begin{center}
+      ~\par
+      \heiti{\fontsize{16bp}{19.2pt}\selectfont #1}\\
+  \end{center}
+}
+\newcommand{\reTitleEN}[1]{
+  % 检查当前页码，如果是偶数页则新开一页
+  \ifthenelse{\isodd{\value{page}}}
+  {}
+  {\newpage}
+  \begin{center}
+      ~\par
+      \textbf{\fontsize{16bp}{19.2pt}\selectfont #1}\\
+  \end{center}
+}
+
+% % 重新定义摘要环境
+% \newcommand{\reAbstract}{
+%   \addcontentsline{toc}{chapter}{摘要}
+%   \begin{center}
+%     \heiti{\fontsize{16bp}{16.8pt}\selectfont 摘要}\\
+%   \end{center}
+% }
+% \newcommand{\reAbstractEN}{
+%   \addcontentsline{toc}{chapter}{Abstract}
+%   \begin{center}
+%     \textbf{\fontsize{16bp}{16.8pt}\selectfont ABSTRACT}\\
+%   \end{center}
+% }
+% 重新定义摘要环境
+\newcommand{\reAbstract}{
+  \phantomsection
+  % \pdfbookmark[0]{摘 \quad 要}{摘 \quad 要}
+  \addcontentsline{toc}{chapter}{\heiti{\fontsize{12bp}{14.4pt}\selectfont 摘 \quad 要} }
+  \begin{center}
+    \heiti{\fontsize{16bp}{16.8pt}\selectfont 摘 \quad 要}\\
+  \end{center}
+}
+\newcommand{\reAbstractEN}{
+  \phantomsection
+  % \pdfbookmark[0]{ABSTRACT}{ABSTRACT}
+  \addcontentsline{toc}{chapter}{{\fontsize{12bp}{14.4pt}\selectfont ABSTRACT}}
+  \begin{center}
+    \textbf{\fontsize{16bp}{16.8pt}\selectfont ABSTRACT}\\
+  \end{center}
+}
+\newcommand{\reKeyword}[1]{
+    ~\par
+    \noindent \heiti{\fontsize{14bp}{16.8bp}\selectfont 关键词：}\songti{\fontsize{14bp}{16.8bp}\selectfont #1}
+    \clearpage
+}
+\newcommand{\reKeywordEN}[1]{
+    ~\par
+    \noindent \textbf{\fontsize{14bp}{16.8bp}\selectfont Key words: }#1
+    \clearpage
+}
+
+% 使一个页面的两张图像紧凑连接
+\usepackage{nomencl}
+\renewcommand{\floatpagefraction}{.95}
+\makenomenclature
 
 % 代码环境宏包
 \usepackage{listings}

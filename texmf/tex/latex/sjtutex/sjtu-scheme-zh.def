@@ -31,8 +31,8 @@
 \keys_set_known:nn { sjtu / name }
   {
     contents      = { 目 \quad 录 } ,
-    listfigure    = { 插 \quad 图 } ,
-    listtable     = { 表 \quad 格 } ,
+    listfigure    = { 图 \quad 录 } ,
+    listtable     = { 表 \quad 录 } ,
     figure        = { 图 } ,
     table         = { 表 } ,
     abstract      = { 摘 \quad 要 } ,
@@ -47,9 +47,9 @@
     abbr          = { 缩略语对照表 } ,
     nom           = { 符号对照表 } ,
     ack           = { 致 \quad 谢 } ,
-    resume        = { 个人简历 } ,
+    resume        = { 作者简历及在学期间所获得的学术成果 } ,
     digest        = { 大摘要 } ,
-    achv          = { 学术论文和科研成果目录 }
+    achv          = { 在学期间所获得的学术成果 }
   }
 \keys_set_known:nn { ctex / chapter }
   {

@@ -41,7 +41,7 @@
   { 学士, 硕士, 博士 }
 \clist_map_inline:nn
   {
-    { univ             } { 上海交通大学           } ,
+    { univ             } { 东华大学           } ,
     { author           } { 姓名                   } ,
     { id               } { 学号                   } ,
     { supervisor       } { 导师                   } ,

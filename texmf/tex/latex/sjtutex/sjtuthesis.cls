@@ -608,10 +608,10 @@
   {
     top           = 3.5 cm,
     bottom        = 4.0 cm,
-    left          = 2.5 cm,
-    right         = 2.5 cm,
+    left          = 2.8 cm,
+    right         = 2.8 cm,
     bindingoffset = 0.5 cm,
-    headheight    = 1.5 cm,
+    headheight    = 0.5 cm,
     headsep       = 0.5 cm,
     footskip      = 1.0 cm
   }
@@ -651,25 +651,26 @@
       \l__sjtu_info_subject_zh_tl
     }
   }
+\renewcommand{ \chaptermark }[ 1 ]{ \markboth {#1} { } }
 \tl_set:Nn \l__sjtu_leftmark_tl  { \leftmark }
 \tl_set:Nn \l__sjtu_rightmark_tl { \leftmark }
 \bool_if:NTF \g__sjtu_twoside_bool
   {
-    \fancyhead [ LO, RE ] { \l__sjtu_header_tl }
-    \fancyhead [ LE ]     { \__sjtu_nouppercase:V \l__sjtu_leftmark_tl  }
-    \fancyhead [ RO ]     { \__sjtu_nouppercase:V \l__sjtu_rightmark_tl }
+    \fancyhead [ CO ] { \l__sjtu_header_tl }
+    \fancyhead [ CE ]     { \__sjtu_nouppercase:V \l__sjtu_leftmark_tl  }
   }
   {
     \fancyhead [ L ] { \l__sjtu_header_tl }
     \fancyhead [ R ] { \__sjtu_nouppercase:V \l__sjtu_rightmark_tl }
   }
-\fancyfoot [ C ] { \__sjtu_page:n { \__sjtu_thepage: } }
+\fancyfoot [ CO ] { \__sjtu_page:n { \__sjtu_thepage: } }
+\fancyfoot [ CE ] { }
 \cs_set:Npn \headrule
   {
-    \hrule height 2.25 pt width \headwidth
-    \skip_vertical:n {  0.75 pt }
-    \hrule height 0.75 pt width \headwidth
-    \skip_vertical:n { -3.75 pt }
+    \hrule height 1.5 pt width \headwidth
+    % \skip_vertical:n {  0.75 pt }
+    % \hrule height 0.75 pt width \headwidth
+    \skip_vertical:n { -1.5 pt }
   }
 \cs_new_eq:NN \ps@SJTU@null \prg_do_nothing:
 \RenewDocumentCommand \cleardoublepage { }
@@ -692,11 +693,11 @@
   {
     pagestyle   = SJTU@null ,
     fixskip     = true ,
-    beforeskip  = 24 bp ,
-    afterskip   = 18 bp ,
+    beforeskip  = 19.85 bp ,
+    afterskip   = 19.85 bp ,
     lofskip     = \c_zero_skip ,
     lotskip     = \c_zero_skip ,
-    format      = \zihao { 3 } \bfseries \CJKsffamily \centering ,
+    format      = \zihao { 3 } \CJKsffamily \centering ,
     nameformat  = ,
     titleformat = ,
     aftername   = \quad ,
@@ -704,16 +705,16 @@
   }
 \ctex_set:nn { section }
   {
-    beforeskip  = 24 bp ,
-    afterskip   =  6 bp ,
-    format      = \zihao { 4 } \bfseries \CJKsffamily ,
+    beforeskip  = 19.85 bp ,
+    afterskip   = 19.85 bp ,
+    format      = \zihao { 4 } \CJKsffamily ,
     afterindent = true
   }
 \ctex_set:nn { subsection }
   {
-    beforeskip  = 12 bp ,
-    afterskip   =  6 bp ,
-    format      = \zihao { -4 } \bfseries \CJKsffamily ,
+    beforeskip  = 19.85 bp ,
+    afterskip   = 19.85 bp ,
+    format      = \zihao { -4 } \CJKsffamily ,
     afterindent = true
   }
 \ctex_set:nn { subsubsection }
@@ -777,14 +778,18 @@
     subcaption-font .initial:n = \zihao { 5 } \normalfont
   }
 \DeclareCaptionLabelSeparator { enskip } { \enskip }
+\DeclareCaptionFont{ kaishu } { \kaishu }
+\DeclareCaptionFont{ wuhao } { \zihao { 5 } \fixedlineskip { 15.6 bp } }
 \captionsetup
   {
+    font          = { kaishu, wuhao },
     labelsep      = enskip ,
-    justification = centering ,
-    font          = SJTU@font
+    justification = centering
   }
 \captionsetup [ sub ]
   {
+    font          = { wuhao },
+    labelformat   = simple,
     format        = hang ,
     justification = justified ,
     font          = SJTU@sub@font
