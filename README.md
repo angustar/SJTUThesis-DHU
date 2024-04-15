@@ -21,7 +21,7 @@ git clone https://github.com/angustar/SJTUThesis-DHU.git
 
 模版更新频繁，且只维护最新版。如有问题，可以先尝试升级模版，而后根据“反馈问题”一栏进行反馈。
 
-如果需要在其他在线 LaTeX 平台上使用（比如 Overleaf (https://www.overleaf.com/)），您可以下载 [最新版压缩包](https://github.com/angustar/SJTUThesis-DHU/archive/refs/heads/master.zip)，然后上传至相应平台。请注意，Overleaf 默认使用 pdflatex 编译，您需要设置使用 XeLaTeX 编译器。
+如果需要在其他在线 LaTeX 平台上使用（比如 [Overleaf](https://www.overleaf.com/)），您可以下载 [最新版压缩包](https://github.com/angustar/SJTUThesis-DHU/archive/refs/heads/master.zip)，然后上传至相应平台。请注意，Overleaf 默认使用 pdflatex 编译，您需要设置使用 XeLaTeX 编译器。
 
 ## 模板使用
 
